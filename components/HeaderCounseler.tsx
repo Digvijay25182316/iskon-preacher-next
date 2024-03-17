@@ -164,15 +164,17 @@ function Header() {
               <FiSun size={24} />
             </button>
           )}
-          <button
-            className={`px-5 py-1.5 text-lg rounded-xl border-2 shadow ${
-              state.theme.theme === "light"
-                ? "border-gray-600"
-                : "border-stone-600"
-            }`}
-          >
-            Login
-          </button>
+          <Link href={"/"}>
+            <button
+              className={`px-5 py-1.5 text-lg rounded-xl border-2 shadow ${
+                state.theme.theme === "light"
+                  ? "border-gray-600"
+                  : "border-stone-600"
+              }`}
+            >
+              Login
+            </button>
+          </Link>
         </div>
       </div>
     </header>

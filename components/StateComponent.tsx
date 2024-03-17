@@ -1,6 +1,7 @@
 "use client";
 import { MyContextProvider, useMyContext } from "@/context/Store";
 import React, { useEffect } from "react";
+import ToastComponent from "./ToastComponent";
 
 function StateComponent({
   children,
@@ -49,6 +50,7 @@ function ChildState({
       }`}
     >
       {children}
+      <ToastComponent />
     </div>
   );
 }
