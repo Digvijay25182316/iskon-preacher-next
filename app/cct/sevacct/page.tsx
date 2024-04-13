@@ -1,9 +1,10 @@
 import Seva from "@/components/ScreensCCT/SevaCCT";
 import React from "react";
+import data from "@/lib/Counselors.json";
 function page() {
   return (
     <div>
-      <Seva />
+      <Seva data={data} />
     </div>
   );
 }

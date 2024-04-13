@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import StateComponent from "@/components/StateComponent";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <StateComponent paddingTop="0">{children}</StateComponent>
+      </body>
     </html>
   );
 }
