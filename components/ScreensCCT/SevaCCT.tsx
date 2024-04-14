@@ -96,7 +96,7 @@ function Seva({ data }: { data: Counseler[] }) {
           >
             <div>
               <h1 className="font-bold text-xl pt-8 px-4">
-                Morning Program Attendance
+                CBM Meeting Attendance
               </h1>
               <p className="px-4 text-gray-500 ">
                 Select one values each as we are tracking the family Details
@@ -449,7 +449,9 @@ function MenuIconAndDropDownDevotees({
                       : "hover:bg-stone-700"
                   }`}
                 >
-                  {`${item.PrabhujiName} & ${item.MatajiName}`}
+                  {item.PrabhujiName && item.MatajiName
+                    ? `${item.PrabhujiName} & ${item.MatajiName}`
+                    : `${item.PrabhujiName} ${item.MatajiName}`}
                 </li>
               ))}
             </ul>
