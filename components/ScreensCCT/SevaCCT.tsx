@@ -17,7 +17,7 @@ function Seva({ data }: { data: Counseler[] }) {
   const [successMessage, setSuccessMessage] = useState("");
 
   const [formData, setFormData] = useState({
-    location: "NVCC_TEMPLE",
+    location: "OFFLINE",
   });
 
   const { state, dispatch } = useMyContext();
@@ -126,13 +126,8 @@ function Seva({ data }: { data: Counseler[] }) {
                 <label className="font-semibold ">Select Location</label>
                 <MenuIconAndDropDown
                   position={"up"}
-                  DataArr={[
-                    { name: "NVCC_TEMPLE" },
-                    { name: "HINJEWADI_CENTER" },
-                    { name: "MAYAPUR_TEMPLE" },
-                    { name: "CAMP_TEMPLE" },
-                  ]}
-                  defaultVal={"NVCC_TEMPLE"}
+                  DataArr={[{ name: "ONLINE" }, { name: "OFFLINE" }]}
+                  defaultVal={"OFFLINE"}
                   setSelected={(value: any) => {
                     setFormData((prev) => ({
                       ...prev,
@@ -143,7 +138,7 @@ function Seva({ data }: { data: Counseler[] }) {
               </div>
             </div>
             <div className="font-bold text-2xl text-center py-10">
-              morning program attendance
+              CBM Meeting Attendance
             </div>
             <div className="flex justify-center w-full ">
               {isLoading ? (

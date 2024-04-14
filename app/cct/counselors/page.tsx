@@ -35,11 +35,11 @@ async function page() {
   const response = await getMorningAttendance();
 
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-white min-h-screen text-black">
       <div className="py-10 text-4xl font-bold text-center">
-        <p>Morning program Attendance</p>
+        <p>CBM meeting attendance</p>
         <p className="font-normal text-lg">
-          these are the peoples who have attended morning program
+          these are the peoples who have attended CBM meeting
         </p>
       </div>
       <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 p-5 gap-5">
@@ -52,7 +52,16 @@ async function page() {
             <p>Pr Phone : {item.PrabhujiPhone}</p>
             <p>Mtg Name : {item.MatajiName}</p>
             <p>Mtg Phone : {item.MatajiPhone}</p>
-            <p>Mtg Phone : {item.createdAt.toLocaleDateString()}</p>
+            {item.location === "OFFLINE" ? (
+              <p className="text-green-500 px-2 py-1 bg-green-950">
+                Mode Attended : {item.location}
+              </p>
+            ) : (
+              <p className="text-red-500 px-2 py-1 bg-red-950">
+                Mode Attended : {item.location}
+              </p>
+            )}
+            <p>Date Attended : {item.createdAt.toLocaleDateString()}</p>
           </div>
         ))}
       </div>
