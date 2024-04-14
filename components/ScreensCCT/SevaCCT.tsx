@@ -5,10 +5,10 @@ import React, { useCallback, useEffect, useRef, useState } from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
 interface Counseler {
-  PrabhujiName: string;
-  MatajiName: string;
-  PrabhujiPhone: number;
-  MatajiPhone: number;
+  PrabhujiName: any;
+  PrabhujiPhone: any;
+  MatajiName: any;
+  MatajiPhone: any;
 }
 
 function Seva({ data }: { data: Counseler[] }) {
