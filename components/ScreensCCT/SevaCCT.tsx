@@ -123,7 +123,9 @@ function Seva({ data }: { data: Counseler[] }) {
                 />
               </div>
               <div className="flex flex-col gap-2 w-full mt-5">
-                <label className="font-semibold ">Select Location</label>
+                <label className="font-semibold ">
+                  attended online or offline?
+                </label>
                 <MenuIconAndDropDown
                   position={"up"}
                   DataArr={[{ name: "ONLINE" }, { name: "OFFLINE" }]}
