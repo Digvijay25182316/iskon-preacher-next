@@ -2,15 +2,20 @@ import Seva from "@/components/ScreensCCT/SevaCCT";
 import React from "react";
 import data from "@/lib/Counselors.json";
 function page() {
-  console.log(
-    typeof data[0].MatajiName,
-    typeof data[0].MatajiPhone,
-    typeof data[0].PrabhujiName,
-    typeof data[0].PrabhujiPhone
-  );
+  const sorted = [...data].sort((a, b) => {
+    if (a.PrabhujiName && b.PrabhujiName) {
+      return a.PrabhujiName.localeCompare(b.PrabhujiName);
+    } else if (!a.PrabhujiName && !b.PrabhujiName) {
+      return a.MatajiName.localeCompare(b.MatajiName);
+    } else if (!a.PrabhujiName) {
+      return a.MatajiName.localeCompare(b.PrabhujiName || b.MatajiName);
+    } else {
+      return a.PrabhujiName.localeCompare(b.MatajiName || b.PrabhujiName);
+    }
+  });
   return (
     <div>
-      <Seva data={data} />
+      <Seva data={sorted} />
     </div>
   );
 }
