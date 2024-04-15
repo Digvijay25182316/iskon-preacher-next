@@ -18,7 +18,7 @@
     "MatajiPhone": 8308588468
   },
   {
-    "PrabhujiName": "Anant Shesh Pr_RNSM",
+    "PrabhujiName": "Anant Shesh Pr",
     "PrabhujiPhone": 9881090289,
     "MatajiName": "Sundari Mtg",
     "MatajiPhone": 9373183264
@@ -66,7 +66,7 @@
     "MatajiPhone": 8805504488
   },
   {
-    "PrabhujiName": "JAINARASIMHA PR",
+    "PrabhujiName": "Jai Narasimha Pr",
     "PrabhujiPhone": 9325006418,
     "MatajiName": "YashodaRani Mtg",
     "MatajiPhone": 9767024107
@@ -157,7 +157,7 @@
   },
   {
     "PrabhujiName": "Rupa Charan Pr",
-    "PrabhujiPhone": "9960512343 , 7972223466",
+    "PrabhujiPhone": 9960512343 ,
     "MatajiName": "RadhikaPrasad Mtg",
     "MatajiPhone": 9892544462
   },
@@ -188,7 +188,7 @@
   {
     "PrabhujiName": "Shyamrup Pr",
     "PrabhujiPhone": 8177999852,
-    "MatajiName": "RadhaBiharini Mtg",
+    "MatajiName": "Radha Biharini Mtg",
     "MatajiPhone": 9689880795
   },
   {
@@ -222,6 +222,12 @@
     "MatajiPhone": 9373866741
   },
   {
+    "PrabhujiName": "Jagannath Suta Pr",
+    "PrabhujiPhone": 7756886433,
+    "MatajiName": "Sudeer Priya Mtg",
+    "MatajiPhone": 9552547814
+  },
+  {
     "PrabhujiName": "Vijay Gopal Pr",
     "PrabhujiPhone": 9552596314,
     "MatajiName": "DaiviPriyaGopi Mtg",
@@ -233,20 +239,85 @@
     "MatajiName": "ManjariGopi Mtg",
     "MatajiPhone": 9552596892
   },
-    {"PrabhujiName":"AjayGopal Pr","PrabhujiPhone":9850510594,"MatajiName":"","MatajiPhone":0},
-{"PrabhujiName":"Anand Kirtan Pr","PrabhujiPhone":9764005787,"MatajiName":"","MatajiPhone":0},
-{"PrabhujiName":"Jaydev Pr","PrabhujiPhone":9370690575,"MatajiName":"","MatajiPhone":0},
-{"PrabhujiName":"KadambKrishna Pr","PrabhujiPhone":9921872872,"MatajiName":"","MatajiPhone":0},
-{"PrabhujiName":"Shuddha Nitai Chandra Pr","PrabhujiPhone":9518589877,"MatajiName":"","MatajiPhone":0},
-{"PrabhujiName":"Navadvip Chandra Pr","PrabhujiPhone":9921132924,"MatajiName":"","MatajiPhone":0},
-{"PrabhujiName":"Sahastra Tirth Pr","PrabhujiPhone":9850128979,"MatajiName":"","MatajiPhone":0},
-{"PrabhujiName":"Sahastra Thirth Pr","PrabhujiPhone":9850128979,"MatajiName":"","MatajiPhone":0},
-{"PrabhujiName":"Sakhinath Pr","PrabhujiPhone":9404963777,"MatajiName":"","MatajiPhone":0},
-{"PrabhujiName":"","PrabhujiPhone":0,"MatajiName":"Bhadravati Mtg","MatajiPhone":9850064948},
-{"PrabhujiName":"","PrabhujiPhone":0,"MatajiName":"BHAKTINIDHI MTG","MatajiPhone":9552544413},
-{"PrabhujiName":"","PrabhujiPhone":0,"MatajiName":"Jahnava Mtg","MatajiPhone":9820554033},
-{"PrabhujiName":"","PrabhujiPhone":0,"MatajiName":"Rajeshwari Mtg","MatajiPhone":9049481859},
-{"PrabhujiName":"","PrabhujiPhone":0,"MatajiName":"Pavitra Manjari Mtg ( SSRVC + SSRKM )","MatajiPhone":9766078705}
+  {
+		"PrabhujiName":"AjayGopal Pr",
+		"PrabhujiPhone":9850510594,
+		"MatajiName":"","MatajiPhone":0
+  },
+  {
+	  "PrabhujiName":"Anand Kirtan Pr",
+	  "PrabhujiPhone":9764005787,
+	  "MatajiName":"","MatajiPhone":0
+   },
+   {
+	   "PrabhujiName":"Jaydev Pr",
+	   "PrabhujiPhone":9370690575,
+	   "MatajiName":"","MatajiPhone":0
+   },
+   
+   {
+	   "PrabhujiName":"KadambKrishna Pr",
+	   "PrabhujiPhone":9921872872,
+	   "MatajiName":"","MatajiPhone":0
+   },
+   {
+	   "PrabhujiName":"Shuddha Nitai Chandra Pr",
+	   "PrabhujiPhone":9518589877,
+	   "MatajiName":"","MatajiPhone":0
+   },
+   {
+	   "PrabhujiName":"Navadvip Chandra Pr",
+	   "PrabhujiPhone":9921132924,
+	   "MatajiName":"","MatajiPhone":0
+   },
+   {  
+   "PrabhujiName":"Sahastra Tirth Pr",
+   "PrabhujiPhone":9850128979,
+   "MatajiName":"","MatajiPhone":0
+   },
+   {
+		"PrabhujiName":"Sahastra Thirth Pr",
+		"PrabhujiPhone":9850128979,
+		"MatajiName":"","MatajiPhone":0
+	},
+	{
+		"PrabhujiName":"Sakhinath Pr",
+		"PrabhujiPhone":9404963777,
+		"MatajiName":"","MatajiPhone":0
+	},
+	{
+		"PrabhujiName":"","PrabhujiPhone":0,
+		"MatajiName":"Bhadravati Mtg",
+		"MatajiPhone":9850064948},
+	{
+		"PrabhujiName":"Rasa Vigraha Pr",
+		"PrabhujiPhone":0,
+		"MatajiName":"Bhakti Nidhi Mtj",
+		"MatajiPhone":9552544413
+	},
+	{
+		"PrabhujiName":"","PrabhujiPhone":0,
+		"MatajiName":"Jahnava Mtg",
+		"MatajiPhone":9820554033
+	},
+	{
+		"PrabhujiName":"",
+		"PrabhujiPhone":0,
+		"MatajiName":"Rajeshwari Mtg",
+		"MatajiPhone":9049481859
+	},
+	{
+		"PrabhujiName":"",
+		"PrabhujiPhone":0,
+		"MatajiName":"Pavitra Manjari Mtg",
+		"MatajiPhone":9766078705
+	},
+	{
+		"PrabhujiName":"",
+		"PrabhujiPhone":0,
+		"MatajiName":"Krishna Rupa Mtg",
+		"MatajiPhone":9650059344
+	}
 ]
 
 
