@@ -10,7 +10,7 @@ function Login() {
   const [isEmail, setIsEmail] = useState("");
   const router = useRouter();
   useEffect(() => {
-    router.push("/cct/sevacct");
+    router.push("/cct/sevacct?query=");
   }, [router]);
   // const [errorMessage, dispatch] = useFormState(authenticate, undefined);
 

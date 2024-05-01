@@ -1,7 +1,15 @@
 "use client";
 import { useMyContext } from "@/context/Store";
 import Image from "next/image";
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
+import React, {
+  ChangeEvent,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
+import { FaMagnifyingGlass } from "react-icons/fa6";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
 interface Counseler {
@@ -330,6 +338,7 @@ function MenuIconAndDropDown({
     </div>
   );
 }
+
 function MenuIconAndDropDownDevotees({
   setSelected,
   DataArr,
@@ -337,7 +346,7 @@ function MenuIconAndDropDownDevotees({
   position,
 }: PropsMenu) {
   const [isSelectionOpen, toggleSelection] = useState(false);
-  const { state } = useMyContext();
+
   const menuRef: any = useRef();
   const [selectedOption, setSelectedOption] = useState("");
   const [modalStyle, setModalStyle] = useState({
@@ -350,6 +359,7 @@ function MenuIconAndDropDownDevotees({
     }
   }, [defaultVal]);
   const [isClosing, setIsClosing] = useState(false);
+  const { state } = useMyContext();
 
   useEffect(() => {
     if (isSelectionOpen) {
@@ -389,32 +399,42 @@ function MenuIconAndDropDownDevotees({
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [toggleSelection, closeModal]);
+  const router = useRouter();
+
+  function handleChange(e: ChangeEvent<HTMLInputElement>) {
+    toggleSelection(true);
+    setSelectedOption(e.target.value);
+    if (isNaN(Number(e.target.value))) {
+      router.push(`/cct/sevacct?query=${e.target.value}`);
+    } else {
+      router.push(`/cct/sevacct?query=${Number(e.target.value)}`);
+    }
+  }
   return (
     <div className="relative inline-block text-left" ref={menuRef}>
-      <button
-        type="button"
-        className={`flex items-center justify-between border px-2 py-2 rounded-xl gap-5 w-full ${
-          state.theme.theme === "light"
-            ? "border-gray-300"
-            : "border-stone-700 bg-stone-900"
+      <div
+        className={`flex items-center gap-5 border w-full px-4 py-1.5 text-lg rounded-xl ${
+          state.theme.theme === "LIGHT"
+            ? "border-stone-800"
+            : "border-stone-300"
         }`}
-        id="options-menu"
-        aria-haspopup="true"
-        aria-expanded="true"
-        onClick={() => toggleSelection(!isSelectionOpen)}
       >
-        {selectedOption === "" ? "Select" : selectedOption}
-        <MdKeyboardArrowDown />
-      </button>
+        <FaMagnifyingGlass />
+        <input
+          type="text"
+          className={`outline-none w-full ${
+            state.theme.theme === "LIGHT" ? "bg-stone-900" : "bg-white"
+          }`}
+          onChange={handleChange}
+          value={selectedOption}
+          placeholder="Search . . . "
+        />
+      </div>
       {isSelectionOpen && (
         <div
           className={`origin-top-left absolute ${
             position === "up" ? "bottom-0 mb-12" : "mt-2 right-0"
-          } w-full rounded-lg shadow-lg z-[1000] ${
-            state.theme.theme === "light"
-              ? "bg-white border-gray-300"
-              : "bg-stone-900 border border-stone-700"
-          } ring-1 ring-black ring-opacity-5 focus:outline-none py-1 px-1`}
+          } w-full rounded-lg shadow-lg z-[1000] bg-white border-gray-300 ring-1 ring-black ring-opacity-5 focus:outline-none py-1 px-1`}
           role="menu"
           aria-orientation="vertical"
           aria-labelledby="options-menu"
@@ -443,11 +463,7 @@ function MenuIconAndDropDownDevotees({
                   }}
                   className={`px-2 py-1.5 rounded-lg ${
                     item.name === selectedOption && "bg-blue-300"
-                  } ${
-                    state.theme.theme === "light"
-                      ? "hover:bg-gray-100 "
-                      : "hover:bg-stone-700"
-                  }`}
+                  } hover:bg-gray-100`}
                 >
                   {item.PrabhujiName && item.MatajiName
                     ? `${item.PrabhujiName} & ${item.MatajiName}`
